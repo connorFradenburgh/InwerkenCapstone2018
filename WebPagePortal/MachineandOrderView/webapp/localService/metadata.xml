@@ -1,0 +1,70 @@
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="e554cfc3215926ca0f587c2f" xml:lang="en" sap:schema-version="0000" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityContainer Name="e554cfc3215926ca0f587c2f_Entities" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="MachineSet" EntityType="e554cfc3215926ca0f587c2f.Machine" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <AssociationSet Name="MachineMachineNumber1Order" Association="e554cfc3215926ca0f587c2f.MachineMachineNumber1Order" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="MachineSet" Role="FromRole_MachineMachineNumber1Order"/>
+                    <End EntitySet="OrderSet" Role="ToRole_MachineMachineNumber1Order"/>
+                </AssociationSet>
+                <EntitySet Name="OrderSet" EntityType="e554cfc3215926ca0f587c2f.Order" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <AssociationSet Name="OrderMachineNumber1Machine" Association="e554cfc3215926ca0f587c2f.OrderMachineNumber1Machine" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="OrderSet" Role="FromRole_OrderMachineNumber1Machine"/>
+                    <End EntitySet="MachineSet" Role="ToRole_OrderMachineNumber1Machine"/>
+                </AssociationSet>
+            </EntityContainer>
+            <EntityType Name="Machine">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="MachineNumber" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="MachineNumber"/>
+                <Property Name="MachineName" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="MachineName"/>
+                <Property Name="DueActivities" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="DueActivities"/>
+                <Property Name="DueOrders" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="DueOrders"/>
+                <Property Name="Warranty" Type="Edm.DateTime" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:display-format="Date" sap:label="Warranty"/>
+                <Property Name="Description" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Description"/>
+                <Property Name="ConstructionYear" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ConstructionYear"/>
+                <Property Name="___FK_98535739d69390280f5df055_00000" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_98535739d69390280f5df055_00000"/>
+                <NavigationProperty Name="MachineNumber1" Relationship="e554cfc3215926ca0f587c2f.MachineMachineNumber1Order" FromRole="FromRole_MachineMachineNumber1Order" ToRole="ToRole_MachineMachineNumber1Order"/>
+            </EntityType>
+            <Association Name="MachineMachineNumber1Order">
+                <End Type="e554cfc3215926ca0f587c2f.Machine" Multiplicity="1" Role="FromRole_MachineMachineNumber1Order"/>
+                <End Type="e554cfc3215926ca0f587c2f.Order" Multiplicity="*" Role="ToRole_MachineMachineNumber1Order"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_MachineMachineNumber1Order">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="ToRole_MachineMachineNumber1Order">
+                        <PropertyRef Name="___FK_c518bba263f259530f5df02b_00000"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityType Name="Order">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="OrderName" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="OrderName"/>
+                <Property Name="___FK_c518bba263f259530f5df02b_00000" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_c518bba263f259530f5df02b_00000"/>
+                <Property Name="MachineNumber" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="MachineNumber"/>
+                <Property Name="Open" Type="Edm.Boolean" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Open"/>
+                <Property Name="OrderDescription" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="OrderDescription"/>
+                <Property Name="DueProcesses" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="DueProcesses"/>
+                <NavigationProperty Name="MachineNumber1" Relationship="e554cfc3215926ca0f587c2f.OrderMachineNumber1Machine" FromRole="FromRole_OrderMachineNumber1Machine" ToRole="ToRole_OrderMachineNumber1Machine"/>
+            </EntityType>
+            <Association Name="OrderMachineNumber1Machine">
+                <End Type="e554cfc3215926ca0f587c2f.Order" Multiplicity="1" Role="FromRole_OrderMachineNumber1Machine"/>
+                <End Type="e554cfc3215926ca0f587c2f.Machine" Multiplicity="*" Role="ToRole_OrderMachineNumber1Machine"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_OrderMachineNumber1Machine">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="ToRole_OrderMachineNumber1Machine">
+                        <PropertyRef Name="___FK_98535739d69390280f5df055_00000"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

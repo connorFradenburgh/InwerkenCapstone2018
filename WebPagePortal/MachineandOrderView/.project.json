@@ -1,0 +1,16 @@
+{
+    "dataBinding": {
+        "/webapp/view/ListOfMachines.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/MachineDetailPage.view.xml": {
+            "entitySet": "/MachineSet"
+        }, 
+        "/webapp/view/ListOfOrders.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/OrderDetailPage.view.xml": {
+            "entitySet": "/OrderSet"
+        } 
+    }
+}
