@@ -14,7 +14,7 @@
 		"resources": "resources.json",
 		"dataSources": {
 			"local": {
-				"uri": "/here/goes/your/serviceUrl/local/",
+				"uri": "/localService/MachineSet.json",
 				"type": "OData",
 				"settings": {
 					"odataVersion": "2.0",
@@ -74,109 +74,110 @@
 				"type": "sap.ui.model.resource.ResourceModel",
 				"uri": "i18n/i18n.properties"
 			},
-			"": {
-				"dataSource": "local",
-				"type": "sap.ui.model.odata.v2.ODataModel",
-				"preload": true,
-				"settings": {
-					"loadMetadataAsync": false,
-					"json": true,
-					"bJSON": true,
-					"defaultBindingMode": "TwoWay",
-					"useBatch": true,
-					"refreshAfterChange": false,
-					"disableHeadRequestForToken": true
-				}
-			}
+      "": {
+        "dataSource": "local",
+        "type": "sap.ui.model.odata.v2.ODataModel",
+        "preload": true,
+        "settings": {
+          "loadMetadataAsync": false,
+          "json": true,
+          "bJSON": true,
+          "defaultBindingMode": "TwoWay",
+          "useBatch": true,
+          "refreshAfterChange": false,
+          "disableHeadRequestForToken": true
+        }
+      }
+
 		},
-		"routing": {
-			"config": {
-				"routerClass": "sap.m.routing.Router",
-				"viewType": "XML",
-				"viewPath": "com.sap.build.standard.inwerkenPrototype.view",
-				"controlId": "idAppControl",
-				"clearTarget": false,
-				"controlAggregation": "detailPages",
-				"async": false,
-				"bypassed": {
-					"target": [
-						"MachineDetailPage",
-						"ListOfMachines"
-					]
-				}
-			},
-			"targets": {
-				"ListOfMachines": {
-					"controlAggregation": "masterPages",
-					"viewName": "ListOfMachines",
-					"viewId": "ListOfMachines",
-					"viewLevel": 1,
-					"transition": "show"
-				},
-				"MachineDetailPage": {
-					"controlAggregation": "detailPages",
-					"viewName": "MachineDetailPage",
-					"viewId": "MachineDetailPage",
-					"viewLevel": 1,
-					"transition": "show"
-				},
-				"ListOfOrders": {
-					"controlAggregation": "masterPages",
-					"viewName": "ListOfOrders",
-					"viewId": "ListOfOrders",
-					"viewLevel": 1,
-					"transition": "show"
-				},
-				"OrderDetailPage": {
-					"controlAggregation": "detailPages",
-					"viewName": "OrderDetailPage",
-					"viewId": "OrderDetailPage",
-					"viewLevel": 1,
-					"transition": "show"
-				}
-			},
-			"routes": [
-				{
-					"pattern": "ListOfMachines",
-					"name": "ListOfMachines",
-					"target": [
-						"MachineDetailPage",
-						"ListOfMachines"
-					]
-				},
-				{
-					"pattern": "ListOfMachines/MachineDetailPage/:context:",
-					"name": "MachineDetailPage",
-					"target": [
-						"ListOfMachines",
-						"MachineDetailPage"
-					]
-				},
-				{
-					"pattern": "ListOfOrders",
-					"name": "ListOfOrders",
-					"target": [
-						"OrderDetailPage",
-						"ListOfOrders"
-					]
-				},
-				{
-					"pattern": "ListOfOrders/OrderDetailPage/:context:",
-					"name": "OrderDetailPage",
-					"target": [
-						"ListOfOrders",
-						"OrderDetailPage"
-					]
-				},
-				{
-					"pattern": "",
-					"name": "default",
-					"target": [
-						"MachineDetailPage",
-						"ListOfMachines"
-					]
-				}
-			]
-		}
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "viewPath": "com.sap.build.standard.inwerkenPrototype.view",
+        "controlId": "idAppControl",
+        "clearTarget": false,
+        "controlAggregation": "detailPages",
+        "async": false,
+        "bypassed": {
+          "target": [
+            "MachineDetailPage",
+            "ListOfMachines"
+          ]
+        }
+      },
+      "targets": {
+        "ListOfMachines": {
+          "controlAggregation": "masterPages",
+          "viewName": "ListOfMachines",
+          "viewId": "ListOfMachines",
+          "viewLevel": 1,
+          "transition": "show"
+        },
+        "MachineDetailPage": {
+          "controlAggregation": "detailPages",
+          "viewName": "MachineDetailPage",
+          "viewId": "MachineDetailPage",
+          "viewLevel": 1,
+          "transition": "show"
+        },
+        "ListOfOrders": {
+          "controlAggregation": "masterPages",
+          "viewName": "ListOfOrders",
+          "viewId": "ListOfOrders",
+          "viewLevel": 1,
+          "transition": "show"
+        },
+        "OrderDetailPage": {
+          "controlAggregation": "detailPages",
+          "viewName": "OrderDetailPage",
+          "viewId": "OrderDetailPage",
+          "viewLevel": 1,
+          "transition": "show"
+        }
+      },
+      "routes": [
+        {
+          "pattern": "ListOfMachines",
+          "name": "ListOfMachines",
+          "target": [
+            "MachineDetailPage",
+            "ListOfMachines"
+          ]
+        },
+        {
+          "pattern": "ListOfMachines/MachineDetailPage/:context:",
+          "name": "MachineDetailPage",
+          "target": [
+            "ListOfMachines",
+            "MachineDetailPage"
+          ]
+        },
+        {
+          "pattern": "ListOfOrders",
+          "name": "ListOfOrders",
+          "target": [
+            "OrderDetailPage",
+            "ListOfOrders"
+          ]
+        },
+        {
+          "pattern": "ListOfOrders/OrderDetailPage/:context:",
+          "name": "OrderDetailPage",
+          "target": [
+            "ListOfOrders",
+            "OrderDetailPage"
+          ]
+        },
+        {
+          "pattern": "",
+          "name": "default",
+          "target": [
+            "MachineDetailPage",
+            "ListOfMachines"
+          ]
+        }
+      ]
+    }
 	}
 }
