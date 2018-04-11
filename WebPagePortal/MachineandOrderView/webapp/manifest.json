@@ -74,6 +74,10 @@
 				"type": "sap.ui.model.resource.ResourceModel",
 				"uri": "i18n/i18n.properties"
 			},
+			"machineView": {
+				"type": "sap.ui.model.JSONModel",
+				"uri": "localService/MachineSet.json"
+			},
       "": {
         "dataSource": "local",
         "type": "sap.ui.model.odata.v2.ODataModel",

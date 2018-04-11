@@ -41,7 +41,7 @@ sap.ui.define([
 
 			// set the dataSource model
 			this.setModel(new sap.ui.model.json.JSONModel({
-				"uri": "/here/goes/your/serviceUrl/local/"
+				"uri": "/localService/metadata.xml"
 			}), "dataSource");
 
 			// set application model
