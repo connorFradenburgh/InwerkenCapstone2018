@@ -5,7 +5,7 @@
                 <layout:positions>
                     <layout:PositionContainer left="336px" top="364px">
                         <layout:control>
-                            <GenericTile header="Maschinensicht" subheader="Offene Wartungen:" frameType="OneByOne">
+                            <GenericTile header="Maschinensicht" subheader="Offene Wartungen:" frameType="OneByOne" press="_onGenericTilePress">
                                 <tileContent>
                                     <TileContent footer="Davon kritisch: 12" unit="">
                                         <content>
