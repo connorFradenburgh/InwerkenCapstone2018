@@ -12,5 +12,12 @@
         "/webapp/view/OrderDetailPage.view.xml": {
             "entitySet": "/OrderSet"
         } 
-    }
+    },
+    "mockpreview": {
+    "mockUri": "/sap/opu/odata/sap/Z_NDSU_COCKPIT_SRV/",
+    "metadataFilePath": "/localService/metadata.xml",
+    "mockRequestsFilePath": "",
+    "loadJSONFiles": true,
+    "loadCustomRequests": false
+  }
 }

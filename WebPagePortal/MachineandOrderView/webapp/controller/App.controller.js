@@ -27,17 +27,17 @@ sap.ui.define([
                 // apply content density mode to root view
                 this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
             
-                return new Promise(function (fnResolve) {
+                // return new Promise(function (fnResolve) {
                     
-                    var oModel, aPromises = [];
-                        oModel = this.getOwnerComponent().getModel();
-                        aPromises.push(oModel.metadataLoaded);
-                    return Promise.all(aPromises).then(function () {
-                        oViewModel.setProperty("/busy", false);
-                        oViewModel.setProperty("/delay", iOriginalBusyDelay);
-                        fnResolve();
-                    });
-                }.bind(this));
+                //     var oModel, aPromises = [];
+                //         oModel = this.getOwnerComponent().getModel();
+                //         aPromises.push(oModel.metadataLoaded);
+                //     return Promise.all(aPromises).then(function () {
+                //         oViewModel.setProperty("/busy", false);
+                //         oViewModel.setProperty("/delay", iOriginalBusyDelay);
+                //         fnResolve();
+                //     });
+                // }.bind(this));
 			}
 		});
 	}

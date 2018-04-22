@@ -57,10 +57,14 @@
         	        
         				
         				sap.ui.require([
-        					"com/sap/build/standard/inwerkenPrototype/localService/mockserver"
-        				], function (server) {
+        					"com/sap/build/standard/inwerkenPrototype/localService/mockserver",
+        					"sap/m/Shell",
+        					"sap/ui/core/ComponentContainer"
+        				], function (mockserver, ) {
         					// set up test service for local testing
-        					server.init();
+        					mockserver.init();
+        					
+        					
         					
         						// initialize the ushell sandbox component
         						sap.ushell.Container.createRenderer().placeAt("app");

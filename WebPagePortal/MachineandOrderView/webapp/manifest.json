@@ -20,6 +20,14 @@
 					"odataVersion": "2.0",
 					"localUri": "/localService/metadata.xml"
 				}
+			},
+			"Z_NDSU_COCKPIT_SRV": {
+				"uri": "",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "/localService/metadata.xml"
+				}
 			}
 		},
 		"sourceTemplate": {
@@ -75,23 +83,28 @@
 				"uri": "i18n/i18n.properties"
 			},
 			"machineView": {
-				"type": "sap.ui.model.JSONModel",
-				"uri": "localService/MachineSet.json"
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "localService/mockdata/MachineSet.json"
 			},
-      "": {
-        "dataSource": "local",
-        "type": "sap.ui.model.odata.v2.ODataModel",
-        "preload": true,
-        "settings": {
-          "loadMetadataAsync": false,
-          "json": true,
-          "bJSON": true,
-          "defaultBindingMode": "TwoWay",
-          "useBatch": true,
-          "refreshAfterChange": false,
-          "disableHeadRequestForToken": true
-        }
-      }
+			"readingPointView": {
+				"dataSource": "local",
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "localService/mockdata/readingPointSet.json"
+			},
+    		"Model": {
+        		"dataSource": "local",
+        		"type": "sap.ui.model.odata.v2.ODataModel",
+        		"preload": true,
+    			"settings": {
+        			"loadMetadataAsync": false,
+        			"json": true,
+        			"bJSON": true,
+        			"defaultBindingMode": "TwoWay",
+        			"useBatch": true,
+        			"refreshAfterChange": false,
+        			"disableHeadRequestForToken": true
+        			}
+    		}
 
 		},
     "routing": {

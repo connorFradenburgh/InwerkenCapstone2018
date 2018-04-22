@@ -913,14 +913,15 @@ sap.ui.define([
 				sErrorParam = oUriParameters.get("errorType"),
 				iErrorCode = sErrorParam === "badRequest" ? 400 : 500,
 				oMainDataSource = oDataSource[sDataSourceName],
-				sMetadataUrl = jQuery.sap.getModulePath(_sAppModulePath + oMainDataSource.settings.localUri.replace(".xml", ""), ".xml"),
+				sMetadataUrl = "../localService/metadata.xml",
+				sMockdataBaseUrl="../localService/mockdata",
 				sMockServerPath = sMetadataUrl.slice(0, sMetadataUrl.lastIndexOf("/") + 1),
 				// ensure there is a trailing slash
-				sMockServerUrl = /.*\/$/.test(oMainDataSource.uri) ? oMainDataSource.uri : oMainDataSource.uri + "/",
+				//sMockServerUrl = "https://services.odata.org/V2/Inwerken/Inwerken.svc/",
 				aAnnotations = oMainDataSource.settings.annotations || [];
 
 			oMockServer = new MockServer({
-				rootUri: sMockServerUrl
+				rootUri: "/sap/opu/odata/sap/Z_NDSU_COCKPIT_SRV/"
 			});
 
 			// configure mock server with a delay of 1s
@@ -931,7 +932,7 @@ sap.ui.define([
 
 			// load local mock data
 			oMockServer.simulate(sMetadataUrl, {
-				sMockdataBaseUrl: sMockServerPath,
+				'sMockdataBaseUrl': sMockdataBaseUrl,
 				bGenerateMissingMockData: true
 			});
 
