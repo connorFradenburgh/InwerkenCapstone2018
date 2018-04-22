@@ -1,0 +1,17 @@
+<mvc:View controllerName="LoginPageLoginPage.controller.Login" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m">
+	<App id="app">
+		<pages>
+			<Page title="{i18n>Greetings, User}">
+				<content>
+				<VBox fitContainer="true" justifyContent="Center" alignItems="Center" alignContent="Center">
+				<Label text="Enter Username and Password."/>
+				<Input id="username" placeholder="Username"/>
+				<Input id="password" placeholder="Password" type="Password"/>
+				<Button text="Login" type="Emphasized" press="onClick"/>
+				</VBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
