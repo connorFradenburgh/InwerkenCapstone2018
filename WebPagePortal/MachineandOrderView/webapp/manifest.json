@@ -83,6 +83,7 @@
 				"uri": "i18n/i18n.properties"
 			},
 			"machineView": {
+				"dataSource": "local",
 				"type": "sap.ui.model.json.JSONModel",
 				"uri": "localService/mockdata/MachineSet.json"
 			},

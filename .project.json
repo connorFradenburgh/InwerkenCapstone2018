@@ -5,5 +5,12 @@
     "mockRequestsFilePath": "",
     "loadJSONFiles": true,
     "loadCustomRequests": false
+  },
+  "translation": {
+    "translationDomain": "",
+    "supportedLanguages": "",
+    "defaultLanguage": "",
+    "defaultI18NPropertyFile": "",
+    "resourceModelName": ""
   }
 }

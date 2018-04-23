@@ -1,1 +1,25 @@
-[{"ID":"O1","OrderName":"Order 1","___FK_c518bba263f259530f5df02b_00000":"","MachineNumber":"3038487","Open":true,"OrderDescription":"Clean filter mat at control cabinet","DueProcesses":8},{"ID":"O2","OrderName":"Order 2","___FK_c518bba263f259530f5df02b_00000":"","MachineNumber":"3118532","Open":false,"OrderDescription":"Check pressure filter","DueProcesses":2},{"ID":"O3","OrderName":"Order 3","___FK_c518bba263f259530f5df02b_00000":"","MachineNumber":"3118532","Open":true,"OrderDescription":"Check and clean transport belt","DueProcesses":5}]
+[{
+	"ID": "O1",
+	"OrderName": "Order 1",
+	"___FK_c518bba263f259530f5df02b_00000": "",
+	"MachineNumber": "3038487",
+	"Open": true,
+	"OrderDescription": "Clean filter mat at control cabinet",
+	"DueProcesses": 8
+}, {
+	"ID": "O2",
+	"OrderName": "Order 2",
+	"___FK_c518bba263f259530f5df02b_00000": "",
+	"MachineNumber": "3118532",
+	"Open": false,
+	"OrderDescription": "Check pressure filter",
+	"DueProcesses": 2
+}, {
+	"ID": "O3",
+	"OrderName": "Order 3",
+	"___FK_c518bba263f259530f5df02b_00000": "",
+	"MachineNumber": "3118532",
+	"Open": true,
+	"OrderDescription": "Check and clean transport belt",
+	"DueProcesses": 5
+}]

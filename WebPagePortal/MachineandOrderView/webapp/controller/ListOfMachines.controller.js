@@ -1,8 +1,9 @@
 sap.ui.define(["sap/ui/core/mvc/Controller",
 	"sap/m/MessageBox",
 	"./utilities",
-	"sap/ui/core/routing/History"
-], function(BaseController, MessageBox, Utilities, History) {
+	"sap/ui/core/routing/History",
+	"sap/ui/model/json/JSONModel"
+], function(BaseController, MessageBox, Utilities, History, JSONModel) {
 	"use strict";
 
 	return BaseController.extend("com.sap.build.standard.inwerkenPrototype.controller.ListOfMachines", {
@@ -644,6 +645,10 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 
 		},
 		onInit: function() {
+			var model1 = new sap.ui.model.json.JSONModel();
+			model1.loadData("../localService/mockdata/MachineSet.json");
+			sap.ui.getCore().setModel(model1);
+			
 			this.oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			this.oRouter.getTarget("ListOfMachines").attachDisplay(jQuery.proxy(this.handleRouteMatched, this));
 
