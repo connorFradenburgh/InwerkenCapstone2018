@@ -480,6 +480,10 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 
 		},
 		onInit: function() {
+			var model1 = new sap.ui.model.json.JSONModel();
+			model1.loadData("../webapp/localService/mockdata/OrderSet.json");
+			sap.ui.getCore().setModel(model1);
+			
 			this.oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			this.oRouter.getTarget("ListOfOrders").attachDisplay(jQuery.proxy(this.handleRouteMatched, this));
 

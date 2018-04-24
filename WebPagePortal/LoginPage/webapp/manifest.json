@@ -90,6 +90,11 @@
 				"type": "sap.ui.model.json.JSONModel",
 				"uri": "localService/mockdata/readingPointSet.json"
 			},
+			"orderView":{
+				"dataSource": "local",
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "localService/mockdata/readingPointSet.json"
+			},
     		"": {
         		"dataSource": "local",
         		"type": "sap.ui.model.odata.v2.ODataModel",
