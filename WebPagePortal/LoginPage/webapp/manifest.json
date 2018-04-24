@@ -14,7 +14,7 @@
 		"resources": "resources.json",
 		"dataSources": {
 			"local": {
-				"uri": "/localService/MachineSet.json",
+				"uri": "/sap/opu/odata/sap/Z_BDSY_COCKPIT_SRV",
 				"type": "OData",
 				"settings": {
 					"odataVersion": "2.0",
@@ -90,7 +90,7 @@
 				"type": "sap.ui.model.json.JSONModel",
 				"uri": "localService/mockdata/readingPointSet.json"
 			},
-    		"Model": {
+    		"": {
         		"dataSource": "local",
         		"type": "sap.ui.model.odata.v2.ODataModel",
         		"preload": true,
