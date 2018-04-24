@@ -295,7 +295,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 
 			if (!oDialog) {
 				oDialog = sap.ui.xmlfragment({
-					fragmentName: "com.sap.build.standard.inwerkenPrototype.view.ViewSettingsDialog1"
+					fragmentName: "LoginLogin.view.ViewSettingsDialog1"
 				}, this);
 				oDialog.attachEvent("confirm", confirmHandler);
 				oDialog.attachEvent("resetFilters", resetFiltersHandler);
@@ -619,7 +619,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 
 			if (!oDialog) {
 				oDialog = sap.ui.xmlfragment({
-					fragmentName: "com.sap.build.standard.inwerkenPrototype.view.ViewSettingsDialog2"
+					fragmentName: "LoginLogin.view.ViewSettingsDialog2"
 				}, this);
 				oDialog.attachEvent("confirm", confirmHandler);
 				oDialog.attachEvent("resetFilters", resetFiltersHandler);

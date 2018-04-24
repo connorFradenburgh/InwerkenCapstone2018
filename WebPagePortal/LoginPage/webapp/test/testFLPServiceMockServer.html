@@ -19,7 +19,7 @@
 					},
 					applications: {
 						"BUILD-prototype": {
-							additionalInformation: "SAPUI5.Component=com.sap.build.standard.entry",
+							additionalInformation: "SAPUI5.Component=LoginPageLoginPage",
 							applicationType: "URL",
 							url: "../",
 							description: "",
@@ -40,7 +40,7 @@
             data-sap-ui-supportedLanguages="en"
             data-sap-ui-bindingSyntax="complex"
 			data-sap-ui-compatVersion="edge" 
-			data-sap-ui-resourceroots='{"com.sap.build.standard.entry":"../","sap.iot.dor":"/build/uilibraries/BRIDGE-CUSTOM-1.0.0/sap/iot/dor"}'>
+			data-sap-ui-resourceroots='{"LoginPageLoginPage":"../","sap.iot.dor":"/build/uilibraries/BRIDGE-CUSTOM-1.0.0/sap/iot/dor"}'>
 		</script>
 
      
@@ -54,7 +54,7 @@
         	        
         				
         				sap.ui.require([
-        					"com/sap/build/standard/entry/localService/mockserver"
+        					"LoginPageLoginPage/localService/mockserver"
         				], function (server) {
         					// set up test service for local testing
         					server.init();

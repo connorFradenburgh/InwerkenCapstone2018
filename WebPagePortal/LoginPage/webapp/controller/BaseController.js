@@ -5,7 +5,7 @@ sap.ui.define([
 	], function (Controller, History) {
 		"use strict";
 
-		return Controller.extend("com.sap.build.standard.inwerkenPrototype.controller.BaseController", {
+		return Controller.extend("LoginLogin.controller.BaseController", {
 			/**
 			 * Convenience method for accessing the router in every controller of the application.
 			 * @public

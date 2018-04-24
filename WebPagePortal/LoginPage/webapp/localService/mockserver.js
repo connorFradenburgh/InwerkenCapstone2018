@@ -884,7 +884,7 @@ sap.ui.define([
 
 
 	var oMockServer,
-		_sAppModulePath = "com.sap.build.standard.inwerkenPrototype/";
+		_sAppModulePath = "LoginLogin/";
 	return {
 
 		/**
