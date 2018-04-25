@@ -1,4 +1,6 @@
-[{
+{
+	"orders":
+	[{
 	"ID": "O1",
 	"OrderName": "Order 1",
 	"___FK_c518bba263f259530f5df02b_00000": "",
@@ -23,3 +25,4 @@
 	"OrderDescription": "Check and clean transport belt",
 	"DueProcesses": 5
 }, {}]
+}

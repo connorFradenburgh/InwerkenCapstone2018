@@ -19,7 +19,10 @@
                 </menu>
             </MenuButton>
             <Button text="Filter" type="Default" icon="sap-icon://add-filter" iconFirst="true" width="133px" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress"/>
-            <List id="sap_List_Page_0-content-sap_m_List-1" mode="SingleSelectMaster" width="100%" headerText="Header" footerText="" backgroundDesign="Solid" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" itemPress="_onListItemPress" items="{path:'/OrderSet', templateShareable:true}">
+            <List id="sap_List_Page_0-content-sap_m_List-1" mode="SingleSelectMaster" width="100%" headerText="Header" 
+            footerText="" backgroundDesign="Solid" showSeparators="All" growing="true" growingThreshold="20" 
+            growingScrollToLoad="true" itemPress="_onListItemPress" 
+            items="{path:'orderView>/orders', templateShareable:true}">
                 <infoToolbar/>
                 <headerToolbar>
                     <Toolbar visible="true" enabled="true" width="" design="Solid">
@@ -29,7 +32,7 @@
                     </Toolbar>
                 </headerToolbar>
                 <items>
-                    <ObjectListItem intro="{MachineNumber}" title="{OrderName}" number="" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false" press="_onObjectListItemPress">
+                    <ObjectListItem intro="{orderView>ID}" title="{orderView>OrderName}" number="" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false" press="_onObjectListItemPress">
                         <attributes>
                             <ObjectAttribute text="Due Processes:" active="false"/>
                         </attributes>

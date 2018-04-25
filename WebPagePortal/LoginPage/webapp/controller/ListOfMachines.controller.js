@@ -175,6 +175,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 				fnPromiseResolve();
 			}
 		},
+		//Set the filter
 		_onButtonPress: function(oEvent) {
 
 			this.mSettingsDialogs = this.mSettingsDialogs || {};
@@ -470,6 +471,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 			});
 
 		},
+		//Navigate to the list of orders page
 		_onButtonPress1: function(oEvent) {
 
 			var oBindingContext = oEvent.getSource().getBindingContext();
@@ -484,6 +486,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 			});
 
 		},
+		
 		_onButtonPress2: function(oEvent) {
 
 			this.mSettingsDialogs = this.mSettingsDialogs || {};

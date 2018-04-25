@@ -19,9 +19,12 @@
                 </menu>
             </MenuButton>
             <Button text="Filter" type="Default" icon="sap-icon://add-filter" iconFirst="true" width="133px" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress"/>
-            <List id="sap_List_Page_0-content-sap_m_List-1" mode="SingleSelectMaster" width="100%" headerText="Header" footerText="" backgroundDesign="Solid" showSeparators="All" growing="false" growingThreshold="20" growingScrollToLoad="false" itemPress="_onListItemPress" items="{path:'/MachineSet', templateShareable:true}">
+            <List id="sap_List_Page_0-content-sap_m_List-1" mode="SingleSelectMaster" width="100%" headerText="Header" footerText="" backgroundDesign="Solid" showSeparators="All" growing="false"
+            growingThreshold="20" growingScrollToLoad="false" itemPress="_onListItemPress" items="{path:'machineView>/d/results', templateShareable:true}">
                 <items>
-                    <ObjectListItem intro="{MachineNumber}" title="{MachineName}" number="" numberUnit="" numberState="None" type="Active" selected="true" showMarkers="false" press="_onObjectListItemPress">
+                    <ObjectListItem intro="{machineView>equipmentNr}" title="{machineView>desc}" 
+                    number="" numberUnit="" numberState="None" type="Active" selected="true" 
+                    showMarkers="false" press="_onObjectListItemPress">
                         <attributes>
                             <ObjectAttribute title="Due Activities" text="{DueActivities}" active="false"/>
                             <ObjectAttribute title="Due Orders" text="{path: 'DueOrders', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" active="false"/>
