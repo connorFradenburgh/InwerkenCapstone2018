@@ -1,5 +1,5 @@
 <mvc:View
-		controllerName="LoginLogin.controller.App"
+		controllerName="LoginPageLoginPage.controller.App"
 		xmlns:mvc="sap.ui.core.mvc"
 		displayBlock="true"
 		busy="{appView>/busy}"

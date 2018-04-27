@@ -1,4 +1,4 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="LoginLogin.controller.OrderDetailPage" xmlns="sap.m">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="LoginPageLoginPage.controller.OrderDetailPage" xmlns="sap.m">
     <Page title="Selected Order" showHeader="true" showFooter="true" showNavButton="false">
         <content>
             <ObjectHeader intro="{MachineNumber}" title="{OrderDescription}" icon="sap-icon://order-status" number="Warranty till:" numberUnit="" numberState="None" showMarkers="false" markFavorite="false" markFlagged="false" backgroundDesign="Translucent" condensed="false">

@@ -116,45 +116,10 @@
 				"routerClass": "sap.m.routing.Router",
 				"viewType": "XML",
 				"viewPath": "LoginPageLoginPage.view",
-				"controlId": "Login",
+				
 				"controlAggregation": "pages"
+				
 			},
-			"routes": [{
-				"name": "Login",
-				"target": ["Login"]
-			}, {
-				"name": "Page1",
-				"pattern": "Page1",
-				"target": ["Page1"]
-			}, {
-				"name": "ListOfMachines",
-				"pattern": "ListOfMachines",
-				"target": ["ListOfMachines"]
-			}, {
-				"name": "ListOfOrders",
-				"pattern": "ListOfOrders",
-				"target": ["ListOfOrders"]
-			},
-			 {
-				"name": "MachineDetailPage",
-				"pattern": "MachineDetailPage",
-				"target": ["MachineDetailPage"]
-			},
-			 {
-				"name": "OrderDetailPage",
-				"pattern": "OrderDetailPage",
-				"target": ["OrderDetailPage"]
-			},
-			 {
-				"name": "ViewSettingsDialog1",
-				"pattern": "ViewSettingsDialog1",
-				"target": ["ViewSettingsDialog1"]
-			},
-			{
-				"name": "ViewSettingsDialog2",
-				"pattern": "ViewSettingsDialog2",
-				"target": ["ViewSettingsDialog2"]
-			}],
 			"targets": {
 				"Login": {
 					"viewType": "XML",
@@ -166,31 +131,36 @@
 					"viewType": "XML",
 					"transition": "slide",
 					"viewName": "Page1",
+					"controlId": "Login",
 					"controlAggregation": "pages"
 				},
 				"ListOfMachines": {
 					"viewType": "XML",
-					"transition": "slide",
+					"transition": "show",
 					"viewName": "ListOfMachines",
-					"controlAggregation": "pages"
+					
+					"viewLevel": 1
 				},
 				"ListOfOrders": {
 					"viewType": "XML",
-					"transition": "slide",
+					"transition": "show",
 					"viewName": "ListOfOrders",
-					"controlAggregation": "pages"
+					"controlAggregation": "pages",
+					"viewLevel": 1
 				},
 				"MachineDetailPage": {
 					"viewType": "XML",
-					"transition": "slide",
+					"transition": "show",
 					"viewName": "MachineDetailPage",
-					"controlAggregation": "pages"
+					
+					"viewLevel": 2
 				},
 				"OrderDetailPage": {
 					"viewType": "XML",
-					"transition": "slide",
+					"transition": "show",
 					"viewName": "OrderDetailPage",
-					"controlAggregation": "pages"
+					"controlAggregation": "pages",
+					"viewLevel": 2
 				},
 				"ViewSettingsDialog1.fragment": {
 					"viewType": "XML",
@@ -204,7 +174,80 @@
 					"viewName": "ViewSettingsDialog2",
 					"controlAggregation": "pages"
 				}
+			},
+			"routes": [{
+				"name": "Login",
+				"target": ["Login"],
+				"controlId": "Login"
+			}, {
+				"name": "Page1",
+				"pattern": "Page1",
+				"target": ["Page1"],
+				"controlId": "Login"
+			}, 
+			{
+				"pattern": "Split",
+				"name": "Splitapp",
+				"view": "App",
+				"targetAggregation": "pages",
+				"controlId": "Login",
+				
+				"subroutes":[{
+					"pattern": "Split",
+					"name": "ListOfMachines",
+					"view": "ListOfMachines",
+					"targetAggregation": "masterPages",
+					"targetControl": "idAppControl",
+					
+					"subroutes":[{
+						"pattern": "Split",
+						"name": "MachineDetailPage",
+						"view": "MachineDetailPage",
+						"targetAggregation": "detailPages"
+
+					}]
+				}]
+				
+			},
+			{
+				"pattern": "orderSplit",
+				"name": "orderSplit",
+				"view": "App",
+				"targetAggregation": "pages",
+				"controlId": "Login",
+				
+				"subroutes":[{
+					"pattern": "orderSplit",
+					"name": "ListOfOrders",
+					"view": "ListOfOrders",
+					"targetAggregation": "masterPages",
+					"targetControl": "idAppControl",
+					
+					"subroutes":[{
+						"pattern": "orderSplit",
+						"name": "OrderDetailPage",
+						"view": "OrderDetailPage",
+						"targetAggregation": "detailPages"
+						
+						
+					}]
+				}]
+			},
+			
+			 {
+				"name": "ViewSettingsDialog1",
+				"pattern": "ViewSettingsDialog1",
+				"controlId": "Login",
+				"target": ["ViewSettingsDialog1"]
+			},
+			{
+				"name": "ViewSettingsDialog2",
+				"pattern": "ViewSettingsDialog2",
+				"controlId": "Login",
+				"target": ["ViewSettingsDialog2"]
 			}
+			]
+			
 	}
 }
 }

@@ -1,7 +1,10 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="LoginLogin.controller.MachineDetailPage" xmlns="sap.m">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="LoginPageLoginPage.controller.MachineDetailPage" xmlns="sap.m">
     <Page title="Selected Machine" showHeader="true" showFooter="true" showNavButton="false">
         <content>
-            <ObjectHeader intro="{MachineNumber}" title="{MachineName}" icon="sap-icon://washing-machine" number="Warranty till:" numberUnit="{path: 'Warranty', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}" numberState="None" showMarkers="false" markFavorite="false" markFlagged="false" backgroundDesign="Translucent" condensed="false">
+            <ObjectHeader intro="{MachineNumber}" title="{MachineName}" icon="sap-icon://washing-machine" number="Warranty till:" 
+            numberUnit="{path: 'Warranty', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}" 
+            numberState="None" showMarkers="false" markFavorite="false" markFlagged="false" backgroundDesign="Translucent" 
+            condensed="false">
                 <attributes>
                     <ObjectAttribute title="Description" text="{Description}" active="false"/>
                     <ObjectAttribute title="Construction Year" text="{ConstructionYear}" active="false"/>
