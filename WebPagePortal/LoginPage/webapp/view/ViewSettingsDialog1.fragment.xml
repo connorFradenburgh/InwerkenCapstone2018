@@ -4,7 +4,7 @@
     <filterItems>
         
         <ViewSettingsFilterItem text="MachineNumber" key="MachineNumber"
-                                items="{path: '/MachineNumber'}">
+                                items="{path: '/equpimentNr'}">
             <items>
                 <ViewSettingsItem key="String___MachineNumber___{}" text="{}"></ViewSettingsItem>
             </items>
@@ -12,7 +12,7 @@
         
         
         <ViewSettingsFilterItem text="OrderName" key="OrderName"
-                                items="{path: '/OrderName'}">
+                                items="{path: '/desc'}">
             <items>
                 <ViewSettingsItem key="String___OrderName___{}" text="{}"></ViewSettingsItem>
             </items>

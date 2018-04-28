@@ -1,28 +1,162 @@
 {
-	"orders":
-	[{
-	"ID": "O1",
-	"OrderName": "Order 1",
-	"___FK_c518bba263f259530f5df02b_00000": "",
-	"MachineNumber": "3038487",
-	"Open": true,
-	"OrderDescription": "Clean filter mat at control cabinet",
-	"DueProcesses": 8
-}, {
-	"ID": "O2",
-	"OrderName": "Order 2",
-	"___FK_c518bba263f259530f5df02b_00000": "",
-	"MachineNumber": "3118532",
-	"Open": false,
-	"OrderDescription": "Check pressure filter",
-	"DueProcesses": 2
-}, {
-	"ID": "O3",
-	"OrderName": "Order 3",
-	"___FK_c518bba263f259530f5df02b_00000": "",
-	"MachineNumber": "3118532",
-	"Open": true,
-	"OrderDescription": "Check and clean transport belt",
-	"DueProcesses": 5
-}, {}]
+  "d" : {
+    "results" : [
+      {
+        "__metadata" : {
+          "id" : "http://DEVLSAPGWT.kg.local:8000/sap/opu/odata/sap/Z_NDSU_COCKPIT_SRV/MaintenanceSet('000000000000200026')",
+          "uri" : "http://DEVLSAPGWT.kg.local:8000/sap/opu/odata/sap/Z_NDSU_COCKPIT_SRV/MaintenanceSet('000000000000200026')",
+          "type" : "Z_NDSU_COCKPIT_SRV.Maintenance"
+        },
+        "point" : "",
+        "kurztext" : "Clean, check and tighten the drive belt",
+        "duedate" : "20180520",
+        "ordernr" : "000300000270",
+        "equnr" : "000000000000200026",
+        "type" : ""
+      },
+      {
+        "__metadata" : {
+          "id" : "http://DEVLSAPGWT.kg.local:8000/sap/opu/odata/sap/Z_NDSU_COCKPIT_SRV/MaintenanceSet('000000000000200026')",
+          "uri" : "http://DEVLSAPGWT.kg.local:8000/sap/opu/odata/sap/Z_NDSU_COCKPIT_SRV/MaintenanceSet('000000000000200026')",
+          "type" : "Z_NDSU_COCKPIT_SRV.Maintenance"
+        },
+        "point" : "",
+        "kurztext" : "Clean ventilators and suction shaft",
+        "duedate" : "20180520",
+        "ordernr" : "000300000270",
+        "equnr" : "000000000000200026",
+        "type" : ""
+      },
+      {
+        "__metadata" : {
+          "id" : "http://DEVLSAPGWT.kg.local:8000/sap/opu/odata/sap/Z_NDSU_COCKPIT_SRV/MaintenanceSet('000000000000200026')",
+          "uri" : "http://DEVLSAPGWT.kg.local:8000/sap/opu/odata/sap/Z_NDSU_COCKPIT_SRV/MaintenanceSet('000000000000200026')",
+          "type" : "Z_NDSU_COCKPIT_SRV.Maintenance"
+        },
+        "point" : "",
+        "kurztext" : "Change filtermat on the controll cabinet",
+        "duedate" : "20180520",
+        "ordernr" : "000300000270",
+        "equnr" : "000000000000200026",
+        "type" : ""
+      },
+      {
+        "__metadata" : {
+          "id" : "http://DEVLSAPGWT.kg.local:8000/sap/opu/odata/sap/Z_NDSU_COCKPIT_SRV/MaintenanceSet('000000000000200026')",
+          "uri" : "http://DEVLSAPGWT.kg.local:8000/sap/opu/odata/sap/Z_NDSU_COCKPIT_SRV/MaintenanceSet('000000000000200026')",
+          "type" : "Z_NDSU_COCKPIT_SRV.Maintenance"
+        },
+        "point" : "",
+        "kurztext" : "Change drive belt",
+        "duedate" : "20180520",
+        "ordernr" : "000300000270",
+        "equnr" : "000000000000200026",
+        "type" : ""
+      },
+      {
+        "__metadata" : {
+          "id" : "http://DEVLSAPGWT.kg.local:8000/sap/opu/odata/sap/Z_NDSU_COCKPIT_SRV/MaintenanceSet('000000000000200026')",
+          "uri" : "http://DEVLSAPGWT.kg.local:8000/sap/opu/odata/sap/Z_NDSU_COCKPIT_SRV/MaintenanceSet('000000000000200026')",
+          "type" : "Z_NDSU_COCKPIT_SRV.Maintenance"
+        },
+        "point" : "",
+        "kurztext" : "Disassemble and clean roller brushes",
+        "duedate" : "20180520",
+        "ordernr" : "000300000270",
+        "equnr" : "000000000000200026",
+        "type" : ""
+      },
+      {
+        "__metadata" : {
+          "id" : "http://DEVLSAPGWT.kg.local:8000/sap/opu/odata/sap/Z_NDSU_COCKPIT_SRV/MaintenanceSet('000000000000200026')",
+          "uri" : "http://DEVLSAPGWT.kg.local:8000/sap/opu/odata/sap/Z_NDSU_COCKPIT_SRV/MaintenanceSet('000000000000200026')",
+          "type" : "Z_NDSU_COCKPIT_SRV.Maintenance"
+        },
+        "point" : "",
+        "kurztext" : "Check and clean all belts",
+        "duedate" : "20180520",
+        "ordernr" : "000300000270",
+        "equnr" : "000000000000200026",
+        "type" : ""
+      },
+      {
+        "__metadata" : {
+          "id" : "http://DEVLSAPGWT.kg.local:8000/sap/opu/odata/sap/Z_NDSU_COCKPIT_SRV/MaintenanceSet('000000000000200026')",
+          "uri" : "http://DEVLSAPGWT.kg.local:8000/sap/opu/odata/sap/Z_NDSU_COCKPIT_SRV/MaintenanceSet('000000000000200026')",
+          "type" : "Z_NDSU_COCKPIT_SRV.Maintenance"
+        },
+        "point" : "",
+        "kurztext" : "Check tissue in the folding station",
+        "duedate" : "20180520",
+        "ordernr" : "000300000270",
+        "equnr" : "000000000000200026",
+        "type" : ""
+      },
+      {
+        "__metadata" : {
+          "id" : "http://DEVLSAPGWT.kg.local:8000/sap/opu/odata/sap/Z_NDSU_COCKPIT_SRV/MaintenanceSet('000000000000200026')",
+          "uri" : "http://DEVLSAPGWT.kg.local:8000/sap/opu/odata/sap/Z_NDSU_COCKPIT_SRV/MaintenanceSet('000000000000200026')",
+          "type" : "Z_NDSU_COCKPIT_SRV.Maintenance"
+        },
+        "point" : "",
+        "kurztext" : "Check blowing nozzles and blowpipes",
+        "duedate" : "20180520",
+        "ordernr" : "000300000270",
+        "equnr" : "000000000000200026",
+        "type" : ""
+      },
+      {
+        "__metadata" : {
+          "id" : "http://DEVLSAPGWT.kg.local:8000/sap/opu/odata/sap/Z_NDSU_COCKPIT_SRV/MaintenanceSet('000000000000200026')",
+          "uri" : "http://DEVLSAPGWT.kg.local:8000/sap/opu/odata/sap/Z_NDSU_COCKPIT_SRV/MaintenanceSet('000000000000200026')",
+          "type" : "Z_NDSU_COCKPIT_SRV.Maintenance"
+        },
+        "point" : "",
+        "kurztext" : "Check feed attachement",
+        "duedate" : "20180520",
+        "ordernr" : "000300000270",
+        "equnr" : "000000000000200026",
+        "type" : ""
+      },
+      {
+        "__metadata" : {
+          "id" : "http://DEVLSAPGWT.kg.local:8000/sap/opu/odata/sap/Z_NDSU_COCKPIT_SRV/MaintenanceSet('000000000000200026')",
+          "uri" : "http://DEVLSAPGWT.kg.local:8000/sap/opu/odata/sap/Z_NDSU_COCKPIT_SRV/MaintenanceSet('000000000000200026')",
+          "type" : "Z_NDSU_COCKPIT_SRV.Maintenance"
+        },
+        "point" : "",
+        "kurztext" : "Check connection shaft",
+        "duedate" : "20180520",
+        "ordernr" : "000300000270",
+        "equnr" : "000000000000200026",
+        "type" : ""
+      },
+      {
+        "__metadata" : {
+          "id" : "http://DEVLSAPGWT.kg.local:8000/sap/opu/odata/sap/Z_NDSU_COCKPIT_SRV/MaintenanceSet('000000000000200026')",
+          "uri" : "http://DEVLSAPGWT.kg.local:8000/sap/opu/odata/sap/Z_NDSU_COCKPIT_SRV/MaintenanceSet('000000000000200026')",
+          "type" : "Z_NDSU_COCKPIT_SRV.Maintenance"
+        },
+        "point" : "",
+        "kurztext" : "Clean profile of the unlocking device",
+        "duedate" : "20180520",
+        "ordernr" : "000300000270",
+        "equnr" : "000000000000200026",
+        "type" : ""
+      },
+      {
+        "__metadata" : {
+          "id" : "http://DEVLSAPGWT.kg.local:8000/sap/opu/odata/sap/Z_NDSU_COCKPIT_SRV/MaintenanceSet('000000000000200026')",
+          "uri" : "http://DEVLSAPGWT.kg.local:8000/sap/opu/odata/sap/Z_NDSU_COCKPIT_SRV/MaintenanceSet('000000000000200026')",
+          "type" : "Z_NDSU_COCKPIT_SRV.Maintenance"
+        },
+        "point" : "",
+        "kurztext" : "Check cylinder, ventills and pipelines",
+        "duedate" : "20180520",
+        "ordernr" : "000300000270",
+        "equnr" : "000000000000200026",
+        "type" : ""
+      }
+    ]
+  }
 }

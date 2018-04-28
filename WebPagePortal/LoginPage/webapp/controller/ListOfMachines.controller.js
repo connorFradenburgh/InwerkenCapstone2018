@@ -296,7 +296,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 
 			if (!oDialog) {
 				oDialog = sap.ui.xmlfragment({
-					fragmentName: "LoginLogin.view.ViewSettingsDialog1"
+					fragmentName: "LoginPageLoginPage.view.ViewSettingsDialog1"
 				}, this);
 				oDialog.attachEvent("confirm", confirmHandler);
 				oDialog.attachEvent("resetFilters", resetFiltersHandler);
@@ -431,11 +431,11 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 				// 1) Search filters (with OR)
 				if (sQuery && sQuery.length > 0) {
 
-					aFilters.push(new sap.ui.model.Filter("ID", sap.ui.model.FilterOperator.Contains, sQuery));
+					aFilters.push(new sap.ui.model.Filter("equipmentNr", sap.ui.model.FilterOperator.Contains, sQuery));
 
-					aFilters.push(new sap.ui.model.Filter("MachineNumber", sap.ui.model.FilterOperator.Contains, sQuery));
+					aFilters.push(new sap.ui.model.Filter("equipmentNr", sap.ui.model.FilterOperator.Contains, sQuery));
 
-					aFilters.push(new sap.ui.model.Filter("MachineName", sap.ui.model.FilterOperator.Contains, sQuery));
+					aFilters.push(new sap.ui.model.Filter("desc", sap.ui.model.FilterOperator.Contains, sQuery));
 
 					aFilters.push(new sap.ui.model.Filter("DueActivities", sap.ui.model.FilterOperator.Contains, sQuery));
 
@@ -444,7 +444,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 						aFilters.push(new sap.ui.model.Filter("DueOrders", sap.ui.model.FilterOperator.EQ, sQuery));
 					}
 
-					aFilters.push(new sap.ui.model.Filter("Description", sap.ui.model.FilterOperator.Contains, sQuery));
+					aFilters.push(new sap.ui.model.Filter("desc", sap.ui.model.FilterOperator.Contains, sQuery));
 
 					aFilters.push(new sap.ui.model.Filter("ConstructionYear", sap.ui.model.FilterOperator.Contains, sQuery));
 

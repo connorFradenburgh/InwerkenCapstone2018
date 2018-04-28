@@ -415,13 +415,13 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 				// 1) Search filters (with OR)
 				if (sQuery && sQuery.length > 0) {
 
-					aFilters.push(new sap.ui.model.Filter("ID", sap.ui.model.FilterOperator.Contains, sQuery));
+					aFilters.push(new sap.ui.model.Filter("equnr", sap.ui.model.FilterOperator.Contains, sQuery));
 
-					aFilters.push(new sap.ui.model.Filter("OrderName", sap.ui.model.FilterOperator.Contains, sQuery));
+					aFilters.push(new sap.ui.model.Filter("ordernr", sap.ui.model.FilterOperator.Contains, sQuery));
 
-					aFilters.push(new sap.ui.model.Filter("MachineNumber", sap.ui.model.FilterOperator.Contains, sQuery));
+					aFilters.push(new sap.ui.model.Filter("type", sap.ui.model.FilterOperator.Contains, sQuery));
 
-					aFilters.push(new sap.ui.model.Filter("OrderDescription", sap.ui.model.FilterOperator.Contains, sQuery));
+					aFilters.push(new sap.ui.model.Filter("kurztext", sap.ui.model.FilterOperator.Contains, sQuery));
 
 					var iQuery = parseFloat(sQuery);
 					if (!isNaN(iQuery)) {
