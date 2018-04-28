@@ -6,7 +6,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 ], function(BaseController, MessageBox, Utilities, History, JSONModel) {
 	"use strict";
 
-	return BaseController.extend("LoginLoginPage.controller.ListOfMachines", {
+	return BaseController.extend("LoginPageLoginPage.controller.ListOfMachines", {
 		handleRouteMatched: function(oEvent) {
 
 			var oParams = {};
