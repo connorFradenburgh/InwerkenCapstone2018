@@ -200,7 +200,7 @@
 					"targetControl": "idAppControl",
 					
 					"subroutes":[{
-						"pattern": "Split",
+						"pattern": "Split/{MachinePath}",
 						"name": "MachineDetailPage",
 						"view": "MachineDetailPage",
 						"targetAggregation": "detailPages"
@@ -224,7 +224,7 @@
 					"targetControl": "idAppControl",
 					
 					"subroutes":[{
-						"pattern": "orderSplit",
+						"pattern": "orderSplit/{OrderPath}",
 						"name": "OrderDetailPage",
 						"view": "OrderDetailPage",
 						"targetAggregation": "detailPages"

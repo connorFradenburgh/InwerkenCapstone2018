@@ -390,30 +390,45 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 
 		},
 		_onListItemPress: function(oEvent) {
-
-			var oBindingContext = oEvent.getParameter("listItem").getBindingContext();
-
-			return new Promise(function(fnResolve) {
-				this.doNavigate("MachineDetailPage", oBindingContext, fnResolve, "");
-			}.bind(this)).catch(function(err) {
-				if (err !== undefined) {
-					MessageBox.error(err.message);
-				}
+			
+			var oItem = oEvent.getSource();
+			
+			
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			oRouter.navTo("MachineDetailPage", {
+				MachinePath: oItem.getBindingContext().getPath().substr(10)
 			});
+			//var oBindingContext = oEvent.getParameter("listItem").getBindingContext();
+
+			//return new Promise(function(fnResolve) {
+			//	this.doNavigate("MachineDetailPage", oBindingContext, fnResolve, "");
+			//}.bind(this)).catch(function(err) {
+			//	if (err !== undefined) {
+			//		MessageBox.error(err.message);
+			//	}
+		//	});
 
 		},
 		_onObjectListItemPress: function(oEvent) {
 
-			var oBindingContext = oEvent.getSource().getBindingContext();
-
-			return new Promise(function(fnResolve) {
-
-				this.doNavigate("MachineDetailPage", oBindingContext, fnResolve, "");
-			}.bind(this)).catch(function(err) {
-				if (err !== undefined) {
-					MessageBox.error(err.message);
-				}
+			//var oBindingContext = oEvent.getParameter("listItem").getBindingContext();
+			var oItem = oEvent.getSource();
+			var sPath = oEvent.getParameter("listItem").getBindingContext("machineView").getPath().substr(11);
+			
+			
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			//console.log(oItem.getBindingContext("machineView"));
+			oRouter.navTo("MachineDetailPage", {
+				MachinePath: sPath
 			});
+			//return new Promise(function(fnResolve) {
+
+			//this.doNavigate("MachineDetailPage", {machinePath: oItem.getBindingContext("machineView").getPath().substr(1)}, fnResolve, "");
+			//}.bind(this)).catch(function(err) {
+			//	if (err !== undefined) {
+			//		MessageBox.error(err.message);
+			//	}
+			//});
 
 		},
 		_onSearchFieldLiveChange: function(oEvent) {
@@ -651,6 +666,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 			var model1 = new sap.ui.model.json.JSONModel();
 			model1.loadData("../webapp/localService/mockdata/MachineSet.json");
 			sap.ui.getCore().setModel(model1);
+			this.getView().setModel(model1, "machineView");
 			
 			this.oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			this.oRouter.getTarget("ListOfMachines").attachDisplay(jQuery.proxy(this.handleRouteMatched, this));

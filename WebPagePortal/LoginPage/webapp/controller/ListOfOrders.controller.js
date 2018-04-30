@@ -452,17 +452,23 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 
 		},
 		_onObjectListItemPress: function(oEvent) {
-
-			var oBindingContext = oEvent.getSource().getBindingContext();
-
-			return new Promise(function(fnResolve) {
-
-				this.doNavigate("OrderDetailPage", oBindingContext, fnResolve, "");
-			}.bind(this)).catch(function(err) {
-				if (err !== undefined) {
-					MessageBox.error(err.message);
-				}
+			var oItem = oEvent.getSource();
+			
+			
+			var oRouter = sap.ui.core.UICompenent.getRouterFor(this);
+			oRouter.navTo("OrderDetailPage", {
+				OrderPath: oItem.getBindingContext("orderView").getPath().substr(1)
 			});
+			//var oBindingContext = oEvent.getSource().getBindingContext();
+
+			//return new Promise(function(fnResolve) {
+
+			//	this.doNavigate("OrderDetailPage", oBindingContext, fnResolve, "");
+		//	}.bind(this)).catch(function(err) {
+			//	if (err !== undefined) {
+			//		MessageBox.error(err.message);
+			//	}
+		//	});
 
 		},
 		_onButtonPress1: function(oEvent) {

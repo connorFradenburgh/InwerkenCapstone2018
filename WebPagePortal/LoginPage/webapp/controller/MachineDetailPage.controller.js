@@ -24,26 +24,35 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 
 		},
 		onInit: function() {
-			var model1 = new sap.ui.model.json.JSONModel();
-			model1.loadData("../webapp/localService/mockdata/MachineSet.json");
-			sap.ui.getCore().setModel(model1);
-			this.oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-			this.oRouter.getTarget("MachineDetailPage").attachDisplay(jQuery.proxy(this.handleRouteMatched, this));
-			var oView = this.getView();
-			oView.addEventDelegate({
-				onBeforeShow: function() {
-					if (sap.ui.Device.system.phone) {
-						var oPage = oView.getContent()[0];
-						if (oPage.getShowNavButton && !oPage.getShowNavButton()) {
-							oPage.setShowNavButton(true);
-							oPage.attachNavButtonPress(function() {
-								this.oRouter.navTo("ListOfMachines", {}, true);
-							}.bind(this));
-						}
-					}
-				}.bind(this)
-			});
+			
+			//var model1 = new sap.ui.model.json.JSONModel();
+			//model1.loadData("../webapp/localService/mockdata/MachineSet.json");
+			//sap.ui.getCore().setModel(model1);
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			
+			oRouter.getRoute("MachineDetailPage").attachPatternMatched(this._onObjectMatched, this);
+			//this.oRouter.getTarget("MachineDetailPage").attachDisplay(jQuery.proxy(this.handleRouteMatched, this));
+			//var oView = this.getView();
+			//oView.addEventDelegate({
+			//	onBeforeShow: function() {
+			//		if (sap.ui.Device.system.phone) {
+			//			var oPage = oView.getContent()[0];
+			//			if (oPage.getShowNavButton && !oPage.getShowNavButton()) {
+			//				oPage.setShowNavButton(true);
+			//				oPage.attachNavButtonPress(function() {
+			//					this.oRouter.navTo("ListOfMachines", {}, true);
+			//				}.bind(this));
+			//			}
+			//		}
+			//	}.bind(this)
+			//});
 
+		},
+		_obObjectMatched: function (oEvent){
+			this.getView().bindElement({
+				path: "/d/results/" + oEvent.getParameter("arguments").MachinePath,
+				model: "machineView"
+			});
 		}
 	});
 }, /* bExport= */ true);

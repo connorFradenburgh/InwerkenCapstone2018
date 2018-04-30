@@ -20,7 +20,7 @@
             </MenuButton>
             <Button text="Filter" type="Default" icon="sap-icon://add-filter" iconFirst="true" width="133px" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress"/>
             <List id="sap_List_Page_0-content-sap_m_List-1" mode="SingleSelectMaster" width="100%" headerText="Header" footerText="" backgroundDesign="Solid" showSeparators="All" growing="false"
-            growingThreshold="20" growingScrollToLoad="false" itemPress="_onListItemPress" items="{path:'machineView>/d/results', templateShareable:true}">
+            growingThreshold="20" growingScrollToLoad="false" itemPress="_onObjectListItemPress" items="{path:'machineView>/d/results', templateShareable:true}">
                 <items>
                     <ObjectListItem intro="{machineView>equipmentNr}" title="{machineView>desc}" 
                     number="" numberUnit="" numberState="None" type="Active" selected="true" 

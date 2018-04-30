@@ -24,23 +24,32 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 
 		},
 		onInit: function() {
-			this.oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-			this.oRouter.getTarget("OrderDetailPage").attachDisplay(jQuery.proxy(this.handleRouteMatched, this));
-			var oView = this.getView();
-			oView.addEventDelegate({
-				onBeforeShow: function() {
-					if (sap.ui.Device.system.phone) {
-						var oPage = oView.getContent()[0];
-						if (oPage.getShowNavButton && !oPage.getShowNavButton()) {
-							oPage.setShowNavButton(true);
-							oPage.attachNavButtonPress(function() {
-								this.oRouter.navTo("ListOfOrders", {}, true);
-							}.bind(this));
-						}
-					}
-				}.bind(this)
-			});
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			
+			oRouter.getRoute("MachineDetailPage").attachPatternMatched(this._onObjectMatched, this);
+			//this.oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			//this.oRouter.getTarget("OrderDetailPage").attachDisplay(jQuery.proxy(this.handleRouteMatched, this));
+			//var oView = this.getView();
+			//oView.addEventDelegate({
+			//	onBeforeShow: function() {
+			//		if (sap.ui.Device.system.phone) {
+			//			var oPage = oView.getContent()[0];
+			//			if (oPage.getShowNavButton && !oPage.getShowNavButton()) {
+			//				oPage.setShowNavButton(true);
+			//				oPage.attachNavButtonPress(function() {
+			//					this.oRouter.navTo("ListOfOrders", {}, true);
+			//				}.bind(this));
+			//			}
+			//		}
+			//	}.bind(this)
+		//	});
 
+		},
+		_obObjectMatched: function (oEvent){
+			this.getView().bindElement({
+				path: "/" + oEvent.getParameter("arguments").MachinePath,
+				model: "machineView"
+			});
 		}
 	});
 }, /* bExport= */ true);
