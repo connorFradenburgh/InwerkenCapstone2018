@@ -412,7 +412,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 		_onObjectListItemPress: function(oEvent) {
 
 			//var oBindingContext = oEvent.getParameter("listItem").getBindingContext();
-			var oItem = oEvent.getSource();
+			//var oItem = oEvent.getSource();
 			var sPath = oEvent.getParameter("listItem").getBindingContext("machineView").getPath().substr(11);
 			
 			
