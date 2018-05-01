@@ -36,7 +36,8 @@
                 <headerToolbar>
                     <Toolbar visible="true" enabled="true" width="" design="Solid">
                         <content>
-                            <SearchField placeholder="Search" showSearchButton="true" visible="true" width="100%" liveChange="_onSearchFieldLiveChange"/>
+                            <SearchField placeholder="Search" showSearchButton="true" 
+                            visible="true" width="100%" liveChange="_onSearchFieldLiveChange"/>
                         </content>
                     </Toolbar>
                 </headerToolbar>

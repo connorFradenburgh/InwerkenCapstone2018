@@ -16,7 +16,8 @@
                 <items>
                     <IconTabFilter icon="sap-icon://lateness" iconColor="Positive" text="Open" count="" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
                         <content>
-                            <Table width="100%" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true">
+                            <Table width="100%" noDataText="No data" mode="None" showSeparators="All" 
+                            growing="true" growingThreshold="20" growingScrollToLoad="true" items="{path:'orderView>/d/results', templateShareable:true}">
                                 <infoToolbar/>
                                 <headerToolbar/>
                                 <columns>
@@ -36,8 +37,9 @@
                                 <items>
                                     <ColumnListItem type="Active">
                                         <cells>
-                                            <ObjectIdentifier title="{path: 'orderView>/d/results/kurztext'}" text="Order Number:" titleActive="false" visible="true"/>
-                                            <ObjectNumber number="Due on:" unit="{machineView>warranty}" emphasized="true" state="None"/>
+                                            <ObjectIdentifier title="{orderView>kurztext}" 
+                                            text="{orderView>ordernr}" titleActive="false" visible="true"/>
+                                            <ObjectNumber number="Due on:" unit="{orderView>duedate}" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
                                 </items>
@@ -45,13 +47,13 @@
                         </content>
                     </IconTabFilter>
                     <IconTabSeparator icon="" iconDensityAware="false"/>
-                    <IconTabFilter icon="sap-icon://sys-enter" iconColor="Neutral" text="Done" count="3" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                    <IconTabFilter icon="sap-icon://sys-enter" iconColor="Neutral" text="Done" count="" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
                         <content>
                             <Text text="Attachments go here ..." width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
                         </content>
                     </IconTabFilter>
                     <IconTabSeparator icon="" iconDensityAware="false"/>
-                    <IconTabFilter icon="sap-icon://print" iconColor="Neutral" text="Print" count="3" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                    <IconTabFilter icon="sap-icon://print" iconColor="Neutral" text="Print" count="" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
                         <content>
                             <Text text="Notes go here ..." width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
                         </content>

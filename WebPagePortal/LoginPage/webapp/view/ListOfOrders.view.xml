@@ -32,7 +32,8 @@
                     </Toolbar>
                 </headerToolbar>
                 <items>
-                    <ObjectListItem intro="{orderView>ordernr}" title="{orderView>kurztext}" number="" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false" press="_onObjectListItemPress">
+                    <ObjectListItem intro="{orderView>ordernr}" title="{orderView>kurztext}" 
+                    number="" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false" press="_onObjectListItemPress">
                         <attributes>
                             <ObjectAttribute text="Due Date:" active="false"/>
                         </attributes>

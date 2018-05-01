@@ -75,7 +75,7 @@
 
           <EntitySet sap:content-version="1" sap:addressable="false" sap:pageable="false" sap:deletable="false" sap:updatable="false" sap:creatable="false" Name="OrderSet" EntityType="Z_NDSU_COCKPIT_SRV.Order"/>
 
-          <EntitySet sap:content-version="1" sap:addressable="false" sap:pageable="false" sap:deletable="false" sap:updatable="false" sap:creatable="false" Name="ReadingpointSet" EntityType="Z_NDSU_COCKPIT_SRV.Readingpoint"/>
+          <EntitySet sap:content-version="1" sap:addressable="false" sap:pageable="false" sap:deletable="false" sap:updatable="false" sap:creatable="false" Name="ReadingPointSet" EntityType="Z_NDSU_COCKPIT_SRV.ReadingPoint"/>
 
         </EntityContainer>
 

@@ -19,9 +19,6 @@ sap.ui.define([
 			this.getView().setModel(model1, "orderView");                        
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.getRoute("MachineDetailPage").attachPatternMatched(this._onObjectMatched, this);
-			
-			
-
 		}
 		
 	});

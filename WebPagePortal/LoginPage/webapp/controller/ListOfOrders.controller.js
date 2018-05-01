@@ -426,7 +426,6 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 					if (!isNaN(iQuery)) {
 						aFilters.push(new sap.ui.model.Filter("DueProcesses", sap.ui.model.FilterOperator.EQ, sQuery));
 					}
-
 				}
 
 				var aFinalFilters = aFilters.length > 0 ? [new sap.ui.model.Filter(aFilters, false)] : [];

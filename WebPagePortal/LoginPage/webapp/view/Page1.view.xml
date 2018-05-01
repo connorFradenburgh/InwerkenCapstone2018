@@ -22,7 +22,8 @@
                                 <tileContent>
                                     <TileContent footer="Davon kritisch: 4" unit="">
                                         <content>
-                                            <NumericContent value="{=${orderView>/d/results/}.length}" valueColor="Error" indicator="None" icon="sap-icon://order-status"/>
+                                            <NumericContent value="{=${orderView>/d/results/}.length}" 
+                                            valueColor="Error" indicator="None" icon="sap-icon://order-status"/>
                                         </content>
                                     </TileContent>
                                 </tileContent>

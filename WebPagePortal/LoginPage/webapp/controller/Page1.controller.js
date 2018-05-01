@@ -90,6 +90,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 			model1.loadData("../webapp/localService/mockdata/MachineSet.json");
 			sap.ui.getCore().setModel(model1);
 			var model2 = new sap.ui.model.json.JSONModel();
+			
 			model2.loadData("../webapp/localService/mockdata/OrderSet.json");
 			sap.ui.getCore().setModel(model2);
 			this.oRouter = sap.ui.core.UIComponent.getRouterFor(this);

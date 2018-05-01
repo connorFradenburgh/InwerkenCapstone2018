@@ -398,7 +398,6 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 			oRouter.navTo("MachineDetailPage", {
 				MachinePath: oItem.getBindingContext().getPath().substr(10)
 			});
-			
 
 		},
 		_onObjectListItemPress: function(oEvent) {
