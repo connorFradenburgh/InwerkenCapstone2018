@@ -26,7 +26,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 		onInit: function() {
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			
-			oRouter.getRoute("MachineDetailPage").attachPatternMatched(this._onObjectMatched, this);
+			oRouter.getRoute("OrderDetailPage").attachPatternMatched(this._onObjectMatched, this);
 			//this.oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			//this.oRouter.getTarget("OrderDetailPage").attachDisplay(jQuery.proxy(this.handleRouteMatched, this));
 			//var oView = this.getView();
@@ -45,10 +45,10 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 		//	});
 
 		},
-		_obObjectMatched: function (oEvent){
+		_onObjectMatched: function (oEvent){
 			this.getView().bindElement({
-				path: "/" + oEvent.getParameter("arguments").MachinePath,
-				model: "machineView"
+				path: "/d/results/" + oEvent.getParameter("arguments").MachinePath,
+				model: "orderView"
 			});
 		}
 	});

@@ -389,16 +389,15 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 		},
 		_onListItemPress: function(oEvent) {
 
-			var oBindingContext = oEvent.getParameter("listItem").getBindingContext();
-
-			return new Promise(function(fnResolve) {
-				this.doNavigate("OrderDetailPage", oBindingContext, fnResolve, "");
-			}.bind(this)).catch(function(err) {
-				if (err !== undefined) {
-					MessageBox.error(err.message);
-				}
+			var oItem = oEvent.getSource();
+			var sPath = oEvent.getParameter("listItem").getBindingContext("orderView").getPath().substr(11);
+			
+			
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			//console.log(oItem.getBindingContext("machineView"));
+			oRouter.navTo("OrderDetailPage", {
+				OrderPath: sPath
 			});
-
 		},
 		_onSearchFieldLiveChange: function(oEvent) {
 			var sControlId = "sap_List_Page_0-content-sap_m_List-1";

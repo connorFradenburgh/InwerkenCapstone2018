@@ -1,36 +1,40 @@
-sap.ui.define(["sap/ui/core/mvc/Controller",
-	"sap/m/MessageBox",
-	"./utilities",
-	"sap/ui/core/routing/History"
-], function(BaseController, MessageBox, Utilities, History) {
+sap.ui.define([
+	"sap/ui/core/mvc/Controller"
+], function(Controller) {
 	"use strict";
 
-	return BaseController.extend("LoginPageLoginPage.controller.MachineDetailPage", {
-		handleRouteMatched: function(oEvent) {
+	return Controller.extend("LoginPageLoginPage.controller.MachineDetailPage", {
+		//handleRouteMatched: function(oEvent) {
 
-			var oParams = {};
+		//	var oParams = {};
 
-			if (oEvent.mParameters.data.context) {
-				this.sContext = oEvent.mParameters.data.context;
-				var oPath;
-				if (this.sContext) {
-					oPath = {
-						path: "/" + this.sContext,
-						parameters: oParams
-					};
-					this.getView().bindObject(oPath);
-				}
-			}
+		//	if (oEvent.mParameters.data.context) {
+		//		this.sContext = oEvent.mParameters.data.context;
+		//		var oPath;
+		//		if (this.sContext) {
+		//			oPath = {
+		//				path: "/" + this.sContext,
+		//				parameters: oParams
+		//			};
+		//			this.getView().bindObject(oPath);
+		//		}
+		//	}
 
+		//},
+		_onObjectMatched: function (oEvent){
+			
+			this.getView().bindElement({
+				path: "/d/results/" + oEvent.getParameter("arguments").MachinePath,
+				model: "machineView"
+			});
 		},
 		onInit: function() {
-			
 			//var model1 = new sap.ui.model.json.JSONModel();
 			//model1.loadData("../webapp/localService/mockdata/MachineSet.json");
 			//sap.ui.getCore().setModel(model1);
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-			
 			oRouter.getRoute("MachineDetailPage").attachPatternMatched(this._onObjectMatched, this);
+			
 			//this.oRouter.getTarget("MachineDetailPage").attachDisplay(jQuery.proxy(this.handleRouteMatched, this));
 			//var oView = this.getView();
 			//oView.addEventDelegate({
@@ -47,12 +51,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 			//	}.bind(this)
 			//});
 
-		},
-		_obObjectMatched: function (oEvent){
-			this.getView().bindElement({
-				path: "/d/results/" + oEvent.getParameter("arguments").MachinePath,
-				model: "machineView"
-			});
 		}
+		
 	});
 }, /* bExport= */ true);
