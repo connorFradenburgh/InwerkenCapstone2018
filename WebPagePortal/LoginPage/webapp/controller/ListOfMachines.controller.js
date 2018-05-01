@@ -398,21 +398,12 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 			oRouter.navTo("MachineDetailPage", {
 				MachinePath: oItem.getBindingContext().getPath().substr(10)
 			});
-			//var oBindingContext = oEvent.getParameter("listItem").getBindingContext();
-
-			//return new Promise(function(fnResolve) {
-			//	this.doNavigate("MachineDetailPage", oBindingContext, fnResolve, "");
-			//}.bind(this)).catch(function(err) {
-			//	if (err !== undefined) {
-			//		MessageBox.error(err.message);
-			//	}
-		//	});
+			
 
 		},
 		_onObjectListItemPress: function(oEvent) {
 
-			//var oBindingContext = oEvent.getParameter("listItem").getBindingContext();
-			//var oItem = oEvent.getSource();
+			
 			var sPath = oEvent.getParameter("listItem").getBindingContext("machineView").getPath().substr(11);
 			
 			
@@ -421,14 +412,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 			oRouter.navTo("MachineDetailPage", {
 				MachinePath: sPath
 			});
-			//return new Promise(function(fnResolve) {
-
-			//this.doNavigate("MachineDetailPage", {machinePath: oItem.getBindingContext("machineView").getPath().substr(1)}, fnResolve, "");
-			//}.bind(this)).catch(function(err) {
-			//	if (err !== undefined) {
-			//		MessageBox.error(err.message);
-			//	}
-			//});
+			
 
 		},
 		_onSearchFieldLiveChange: function(oEvent) {

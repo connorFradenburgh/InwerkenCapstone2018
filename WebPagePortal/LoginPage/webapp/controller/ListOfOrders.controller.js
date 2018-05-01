@@ -458,16 +458,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 			oRouter.navTo("OrderDetailPage", {
 				OrderPath: oItem.getBindingContext("orderView").getPath().substr(1)
 			});
-			//var oBindingContext = oEvent.getSource().getBindingContext();
-
-			//return new Promise(function(fnResolve) {
-
-			//	this.doNavigate("OrderDetailPage", oBindingContext, fnResolve, "");
-		//	}.bind(this)).catch(function(err) {
-			//	if (err !== undefined) {
-			//		MessageBox.error(err.message);
-			//	}
-		//	});
+			
 
 		},
 		_onButtonPress1: function(oEvent) {

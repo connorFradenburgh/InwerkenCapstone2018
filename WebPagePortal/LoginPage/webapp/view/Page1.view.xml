@@ -9,7 +9,7 @@
                                 <tileContent>
                                     <TileContent footer="Davon kritisch: 12" unit="">
                                         <content>
-                                            <NumericContent value="77" valueColor="Error" indicator="None" icon="sap-icon://washing-machine"/>
+                                            <NumericContent value="{=${machineView>/d/results/}.length}" valueColor="Error" indicator="None" icon="sap-icon://washing-machine"/>
                                         </content>
                                     </TileContent>
                                 </tileContent>
@@ -22,7 +22,7 @@
                                 <tileContent>
                                     <TileContent footer="Davon kritisch: 4" unit="">
                                         <content>
-                                            <NumericContent value="17" valueColor="Error" indicator="None" icon="sap-icon://order-status"/>
+                                            <NumericContent value="{=${orderView>/d/results/}.length}" valueColor="Error" indicator="None" icon="sap-icon://order-status"/>
                                         </content>
                                     </TileContent>
                                 </tileContent>
