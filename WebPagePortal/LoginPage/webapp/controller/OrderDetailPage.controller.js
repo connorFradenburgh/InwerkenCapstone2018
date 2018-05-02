@@ -11,13 +11,16 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			
 			oRouter.getRoute("OrderDetailPage").attachPatternMatched(this._onObjectMatched, this);
+			//set model1 to maintenanceset.json
+			var model1 = new sap.ui.model.json.JSONModel();
+			model1.loadData("../webapp/localService/mockdata/MaintenanceSet.json");
+			sap.ui.getCore().setModel(model1);
+			this.getView().setModel(model1, "maintenanceView");
 
 		},
 		_onObjectMatched: function (oEvent){
-			var model1 = new sap.ui.model.json.JSONModel();
-			model1.loadData("../webapp/localService/mockdata/readingPointSet.json");
-			sap.ui.getCore().setModel(model1);
-			this.getView().setModel(model1, "readingPointView");
+			
+			//get order view data from list of orders
 			this.getView().bindElement({
 				path: "/d/results/" + oEvent.getParameter("arguments").OrderPath,
 				model: "orderView"

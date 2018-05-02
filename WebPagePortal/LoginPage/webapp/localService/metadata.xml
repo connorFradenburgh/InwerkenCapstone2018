@@ -1,88 +1,47 @@
+
 <edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
-    <edmx:DataServices m:DataServiceVersion="2.0">
-      -<Schema xml:lang="de" xmlns="http://schemas.microsoft.com/ado/2008/09/edm" sap:schema-version="1" Namespace="Z_NDSU_COCKPIT_SRV">
-
-
-        -<EntityType sap:content-version="1" Name="Machine">
-
-
-          -<Key>
-
-            <PropertyRef Name="equipmentNr"/>
-
-          </Key>
-
-          <Property sap:updatable="false" sap:creatable="false" Name="equipmentNr" sap:filterable="false" sap:sortable="false" sap:unicode="false" Nullable="false" Type="Edm.String"/>
-
-          <Property sap:updatable="false" sap:creatable="false" Name="desc" sap:filterable="false" sap:sortable="false" sap:unicode="false" Type="Edm.String"/>
-
-          <Property sap:updatable="false" sap:creatable="false" Name="constYear" sap:filterable="false" sap:sortable="false" sap:unicode="false" Type="Edm.String"/>
-
-          <Property sap:updatable="false" sap:creatable="false" Name="orderNr" sap:filterable="false" sap:sortable="false" sap:unicode="false" Type="Edm.String"/>
-
-          <Property sap:updatable="false" sap:creatable="false" Name="goodsRec" sap:filterable="false" sap:sortable="false" sap:unicode="false" Type="Edm.String"/>
-
-          <Property sap:updatable="false" sap:creatable="false" Name="warranty" sap:filterable="false" sap:sortable="false" sap:unicode="false" Type="Edm.String"/>
-
-        </EntityType>
-
-
-        -<EntityType sap:content-version="1" Name="Order">
-
-
-          -<Key>
-
-            <PropertyRef Name="orderNr"/>
-
-          </Key>
-
-          <Property sap:updatable="false" sap:creatable="false" Name="equiNr" sap:filterable="false" sap:sortable="false" sap:unicode="false" Type="Edm.String"/>
-
-          <Property sap:updatable="false" sap:creatable="false" Name="orderNr" sap:filterable="false" sap:sortable="false" sap:unicode="false" Nullable="false" Type="Edm.String"/>
-
-          <Property sap:updatable="false" sap:creatable="false" Name="desc" sap:filterable="false" sap:sortable="false" sap:unicode="false" Type="Edm.String"/>
-
-          <Property sap:updatable="false" sap:creatable="false" Name="constYear" sap:filterable="false" sap:sortable="false" sap:unicode="false" Type="Edm.String"/>
-
-          <Property sap:updatable="false" sap:creatable="false" Name="goodsRec" sap:filterable="false" sap:sortable="false" sap:unicode="false" Type="Edm.String"/>
-
-          <Property sap:updatable="false" sap:creatable="false" Name="warranty" sap:filterable="false" sap:sortable="false" sap:unicode="false" Type="Edm.String"/>
-
-        </EntityType>
-
-
-        -<EntityType sap:content-version="1" Name="Readingpoint">
-
-
-          -<Key>
-
-            <PropertyRef Name="codegruppe"/>
-
-          </Key>
-
-          <Property sap:updatable="false" sap:creatable="false" Name="messpunkt" sap:filterable="false" sap:sortable="false" sap:unicode="false" Type="Edm.String"/>
-
-          <Property sap:updatable="false" sap:creatable="false" Name="codegruppe" sap:filterable="false" sap:sortable="false" sap:unicode="false" Nullable="false" Type="Edm.String"/>
-
-          <Property sap:updatable="false" sap:creatable="false" Name="kurztext" sap:filterable="false" sap:sortable="false" sap:unicode="false" Type="Edm.String"/>
-
-        </EntityType>
-
-
-        -<EntityContainer Name="Z_NDSU_COCKPIT_SRV_Entities" sap:supported-formats="atom json xlsx" m:IsDefaultEntityContainer="true">
-
-          <EntitySet sap:content-version="1" sap:addressable="false" sap:pageable="false" sap:deletable="false" sap:updatable="false" sap:creatable="false" Name="MachineSet" EntityType="Z_NDSU_COCKPIT_SRV.Machine"/>
-
-          <EntitySet sap:content-version="1" sap:addressable="false" sap:pageable="false" sap:deletable="false" sap:updatable="false" sap:creatable="false" Name="OrderSet" EntityType="Z_NDSU_COCKPIT_SRV.Order"/>
-
-          <EntitySet sap:content-version="1" sap:addressable="false" sap:pageable="false" sap:deletable="false" sap:updatable="false" sap:creatable="false" Name="ReadingPointSet" EntityType="Z_NDSU_COCKPIT_SRV.ReadingPoint"/>
-
-        </EntityContainer>
-
-        <atom:link xmlns:atom="http://www.w3.org/2005/Atom" href="http://DEVLSAPGWT.kg.local:8000/sap/opu/odata/sap/Z_NDSU_COCKPIT_SRV/$metadata" rel="self"/>
-
-        <atom:link xmlns:atom="http://www.w3.org/2005/Atom" href="http://DEVLSAPGWT.kg.local:8000/sap/opu/odata/sap/Z_NDSU_COCKPIT_SRV/$metadata" rel="latest-version"/>
-
-      </Schema>
-    </edmx:DataServices>
+ <edmx:DataServices m:DataServiceVersion="2.0">
+  <Schema Namespace="Z_NDSU_COCKPIT_SRV" xml:lang="de" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+   <EntityType Name="Machine" sap:content-version="1">
+    <Key>
+     <PropertyRef Name="equipmentNr"/>
+    </Key>
+    <Property Name="equipmentNr" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="desc" Type="Edm.String" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="constYear" Type="Edm.String" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="goodsRec" Type="Edm.String" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="warranty" Type="Edm.String" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+   </EntityType>
+   <EntityType Name="Order" sap:content-version="1">
+    <Key>
+     <PropertyRef Name="ordernr"/>
+    </Key>
+    <Property Name="equnr" Type="Edm.String" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="ordernr" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Meldungsnummer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="desc" Type="Edm.String" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="due" Type="Edm.String" MaxLength="8" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+   </EntityType>
+   <EntityType Name="Maintenance" sap:content-version="1">
+    <Key>
+     <PropertyRef Name="equnr"/>
+    </Key>
+    <Property Name="point" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"/>
+    <Property Name="kurztext" Type="Edm.String" sap:unicode="false" sap:creatable="false" sap:updatable="false"/>
+    <Property Name="duedate" Type="Edm.String" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="ordernr" Type="Edm.String" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+    <Property Name="equnr" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"/>
+    <Property Name="type" Type="Edm.String" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+   </EntityType>
+   <EntityContainer Name="Z_NDSU_COCKPIT_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+    <EntitySet Name="MachineSet" EntityType="Z_NDSU_COCKPIT_SRV.Machine" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+    <EntitySet Name="OrderSet" EntityType="Z_NDSU_COCKPIT_SRV.Order" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+    <EntitySet Name="MaintenanceSet" EntityType="Z_NDSU_COCKPIT_SRV.Maintenance" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+    <FunctionImport Name="setReadingPoint" ReturnType="Collection(Z_NDSU_COCKPIT_SRV.Maintenance)" EntitySet="MaintenanceSet" m:HttpMethod="GET" sap:label="Rüeckmeldung Reading Point" sap:action-for="Z_NDSU_COCKPIT_SRV.Maintenance">
+     <Parameter Name="messpunkt" Type="Edm.String" Mode="In"/>
+    </FunctionImport>
+   </EntityContainer>
+   <atom:link rel="self" href="http://DEVLSAPGWT.kg.local:8000/sap/opu/odata/sap/Z_NDSU_COCKPIT_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+   <atom:link rel="latest-version" href="http://DEVLSAPGWT.kg.local:8000/sap/opu/odata/sap/Z_NDSU_COCKPIT_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+  </Schema>
+ </edmx:DataServices>
 </edmx:Edmx>

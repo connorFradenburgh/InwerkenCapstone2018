@@ -85,10 +85,10 @@
 				"type": "sap.ui.model.json.JSONModel",
 				"uri": "localService/mockdata/MachineSet.json"
 			},
-			"readingPointView": {
+			"maintenanceView": {
 				"dataSource": "local",
 				"type": "sap.ui.model.json.JSONModel",
-				"uri": "localService/mockdata/readingPointSet.json"
+				"uri": "localService/mockdata/MaintenanceSet.json"
 			},
 			"orderView":{
 				"dataSource": "local",

@@ -36,6 +36,7 @@
                     number="" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false" press="_onObjectListItemPress">
                         <attributes>
                             <ObjectAttribute text="Due Date:" active="false"/>
+                            <ObjectAttribute text="Equipment Number: {orderView>equnr}" active="false"/>
                         </attributes>
                         <firstStatus>
                             <ObjectStatus text="{orderView>duedate}" state="None"/>

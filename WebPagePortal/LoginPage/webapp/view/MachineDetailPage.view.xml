@@ -1,13 +1,13 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="LoginPageLoginPage.controller.MachineDetailPage" xmlns="sap.m">
     <Page title="Selected Machine" showHeader="true" showFooter="true" showNavButton="false">
         <content>
-            <ObjectHeader intro="{}" title="{machineView>equipmentNr}" icon="sap-icon://washing-machine" 
+            <ObjectHeader intro="{}" title="{machineView>desc}" icon="sap-icon://washing-machine" 
             number="Warranty till:" 
             numberUnit="{machineView>warranty}" 
             numberState="None" showMarkers="false" markFavorite="false" markFlagged="false" backgroundDesign="Translucent" 
             condensed="false">
                 <attributes>
-                    <ObjectAttribute title="Description" text="{machineView>desc}" active="false"/>
+                    <ObjectAttribute title="Equipment Number: " text="{machineView>equipmentNr}" active="false"/>
                     <ObjectAttribute title="Construction Year" text="{machineView>constYear}" active="false"/>
                 </attributes>
                 <statuses/>

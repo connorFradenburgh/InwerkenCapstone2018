@@ -26,8 +26,8 @@
                     number="" numberUnit="" numberState="None" type="Active" selected="true" 
                     showMarkers="false" press="_onObjectListItemPress">
                         <attributes>
-                            <ObjectAttribute title="Due Activities" text="{DueActivities}" active="false"/>
-                            <ObjectAttribute title="Due Orders" text="{path: 'DueOrders', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" active="false"/>
+                            <ObjectAttribute title="" text="" active="false"/>
+                            <ObjectAttribute title="" text="" active="false"/>
                         </attributes>
                         <firstStatus/>
                         <secondStatus/>
