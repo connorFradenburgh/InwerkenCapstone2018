@@ -1,0 +1,60 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="LoginPageLoginPage.controller.ListOfOrders" xmlns="sap.m">
+    <Page title="Orders" showHeader="true" showFooter="true" showNavButton="false" navButtonPress="_onPageNavButtonPress">
+        <content>
+            <MenuButton text="Goods Recipient" type="Default" icon="sap-icon://addresses" width="180px" enabled="true" buttonMode="Regular" useDefaultActionOnly="false">
+                <menu>
+                    <Menu title="Menu Title">
+                        <items>
+                            <MenuItem text="Edit" enabled="true" icon="sap-icon://edit" visible="true" startsSection="false">
+                                <items/>
+                            </MenuItem>
+                            <MenuItem text="Save" enabled="true" icon="sap-icon://save" visible="true" startsSection="false">
+                                <items/>
+                            </MenuItem>
+                            <MenuItem text="Open" enabled="true" icon="sap-icon://open-folder" visible="true" startsSection="false">
+                                <items/>
+                            </MenuItem>
+                        </items>
+                    </Menu>
+                </menu>
+            </MenuButton>
+            <Button text="Filter" type="Default" icon="sap-icon://add-filter" iconFirst="true" width="133px" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress"/>
+            <List id="sap_List_Page_0-content-sap_m_List-1" mode="SingleSelectMaster" width="100%" headerText="Header" 
+            footerText="" backgroundDesign="Solid" showSeparators="All" growing="true" growingThreshold="20" 
+            growingScrollToLoad="true" itemPress="_onListItemPress" 
+            items="{path:'orderView>/d/results', templateShareable:true}">
+                <infoToolbar/>
+                <headerToolbar>
+                    <Toolbar visible="true" enabled="true" width="" design="Solid">
+                        <content>
+                            <SearchField placeholder="Search" showSearchButton="true" visible="true" width="100%" liveChange="_onSearchFieldLiveChange"/>
+                        </content>
+                    </Toolbar>
+                </headerToolbar>
+                <items>
+                    <ObjectListItem intro="{orderView>ordernr}" title="{orderView>kurztext}" 
+                    number="" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false" press="_onObjectListItemPress">
+                        <attributes>
+                            <ObjectAttribute text="Due Date:" active="false"/>
+                            <ObjectAttribute text="Equipment Number: {orderView>equnr}" active="false"/>
+                        </attributes>
+                        <firstStatus>
+                            <ObjectStatus text="{orderView>duedate}" state="None"/>
+                        </firstStatus>
+                        <secondStatus/>
+                    </ObjectListItem>
+                </items>
+            </List>
+        </content>
+        <footer>
+            <Bar design="Auto">
+                <contentLeft>
+                    <Button text="Switch to Machine View" type="Default" iconFirst="true" width="183px" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress1"/>
+                </contentLeft>
+                <contentMiddle/>
+                <contentRight/>
+            </Bar>
+        </footer>
+        <headerContent/>
+    </Page>
+</mvc:View>

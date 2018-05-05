@@ -1,0 +1,41 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="test1test.controller.View1" displayBlock="true">
+	<App>
+		<pages>
+	
+			<sap.m.semantic:DetailPage xmlns:sap.m.semantic="sap.m.semantic" title="Tutorial Page" id="__page0">
+		
+				    <sap.m.semantic:content>
+			
+				    	<SegmentedButton selectedButton="__button1" id="__button0">
+				    	    <buttons>
+				    	        <Button text="English" id="__button1"/>
+					        
+				    	        <Button text="Deutsch" id="__button2"/></buttons>
+				    	</SegmentedButton>
+				            
+				    	<CustomListItem id="__step1">
+				            <content>
+				                <Text text="step 1" id="__text0"/>
+				            </content>
+				        </CustomListItem>
+				        
+				        <CustomListItem id="__step2">
+				            <content>
+				                <Text text="step 2" id="__text1"/>
+				            </content>
+				        </CustomListItem>
+					        
+				    	<CustomListItem id="__step3">
+				            <content>
+				                <Text text="step 3" id="__text2"/>
+				            </content>
+				        </CustomListItem>
+					        
+			
+				    </sap.m.semantic:content>
+		
+			</sap.m.semantic:DetailPage>
+	
+		</pages>
+	</App>
+</mvc:View>
